@@ -18,7 +18,8 @@ const images = [
 
 const gallery = document.getElementById('gallery')
 gallery.classList.add('wrapper')
-const galleryRef = (arr) =>{ arr.map( (el) => {
+
+const galleryRef = (parrent,arr) =>{ arr.forEach( (el) => {
 const itemListRef =  document.createElement('li')
 const imageRef =  document.createElement('img')
 itemListRef.classList.add('item')
@@ -27,8 +28,8 @@ imageRef.setAttribute('alt', el.alt)
 imageRef.setAttribute('width', 300)
 // console.log(imageRef)
 itemListRef.appendChild(imageRef)
-gallery.appendChild(itemListRef)
+parrent.appendChild(itemListRef)
 })
 }
 
-galleryRef(images)
+galleryRef(gallery, images)
