@@ -20,16 +20,16 @@ const gallery = document.getElementById('gallery')
 gallery.classList.add('wrapper')
 
 const galleryRef = (parrent,arr) =>{ arr.forEach( (el) => {
-const itemListRef =  document.createElement('li')
-const imageRef =  document.createElement('img')
-itemListRef.classList.add('item')
-imageRef.setAttribute('src', el.url)
-imageRef.setAttribute('alt', el.alt)
-imageRef.setAttribute('width', 300)
-// console.log(imageRef)
-itemListRef.appendChild(imageRef)
-parrent.appendChild(itemListRef)
-})
-}
+    const itemListRef =  document.createElement('li')
+    const imageRef =  document.createElement('img')
+    itemListRef.classList.add('item')
+    imageRef.setAttribute('src', el.url)
+    imageRef.setAttribute('alt', el.alt)
+    imageRef.setAttribute('width', 300)
+    // console.log(imageRef)
+    itemListRef.appendChild(imageRef)
+    parrent.appendChild(itemListRef)
+    })
+    }
 
 galleryRef(gallery, images)

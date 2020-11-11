@@ -7,11 +7,11 @@ const ingredients = [
     'Приправы',
   ];
  const ingredient = document.getElementById('ingredients')
- const tegs =  ingredients.map((el) => {
- let item =  document.createElement('li')
- item.textContent = el
- ingredient.appendChild(item)
- })
+ ingredients.forEach((el) => {
+    let item =  document.createElement('li')
+    item.textContent = el
+    ingredient.appendChild(item)
+    })
 
   
 
