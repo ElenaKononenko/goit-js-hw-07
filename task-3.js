@@ -26,6 +26,7 @@ const galleryRef = (parrent,arr) =>{ arr.forEach( (el) => {
     imageRef.setAttribute('src', el.url)
     imageRef.setAttribute('alt', el.alt)
     imageRef.setAttribute('width', 300)
+    imageRef.classList.add('image')
     // console.log(imageRef)
     itemListRef.appendChild(imageRef)
     parrent.appendChild(itemListRef)
