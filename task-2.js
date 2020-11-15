@@ -7,8 +7,12 @@ const ingredients = [
   "Приправы",
 ];
 const ingredient = document.getElementById("ingredients");
-ingredients.forEach((el) => {
+const ingredArr = ingredients.map((el) => {
   let item = document.createElement("li");
   item.textContent = el;
-  ingredient.appendChild(item);
+  return item;
+});
+
+ingredArr.forEach((el) => {
+  ingredient.appendChild(el);
 });

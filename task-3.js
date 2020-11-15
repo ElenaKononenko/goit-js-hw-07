@@ -19,19 +19,17 @@ const images = [
 const gallery = document.getElementById("gallery");
 gallery.classList.add("wrapper");
 
-const galleryRef = (parrent, arr) => {
-  arr.forEach((el) => {
-    const itemListRef = document.createElement("li");
-    const imageRef = document.createElement("img");
-    itemListRef.classList.add("item");
-    imageRef.setAttribute("src", el.url);
-    imageRef.setAttribute("alt", el.alt);
-    imageRef.setAttribute("width", 300);
-    imageRef.classList.add("image");
-    // console.log(imageRef)
-    itemListRef.appendChild(imageRef);
-    parrent.appendChild(itemListRef);
-  });
-};
-
-galleryRef(gallery, images);
+const galleryRef = images.map((el) => {
+  const itemListRef = document.createElement("li");
+  const imageRef = document.createElement("img");
+  itemListRef.classList.add("item");
+  imageRef.setAttribute("src", el.url);
+  imageRef.setAttribute("alt", el.alt);
+  imageRef.setAttribute("width", 300);
+  imageRef.classList.add("image");
+  itemListRef.appendChild(imageRef);
+  return itemListRef;
+});
+galleryRef.forEach((el) => {
+  gallery.appendChild(el);
+});

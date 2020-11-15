@@ -4,10 +4,12 @@ const decrement = document.querySelector('[data-action="decrement"]');
 const value = document.querySelector("#value");
 
 const incrementFunc = () => {
-  (counterValue += 1), (value.textContent = counterValue);
+  counterValue += 1;
+  value.textContent = counterValue;
 };
 const decrementFunc = () => {
-  (counterValue -= 1), (value.textContent = counterValue);
+  counterValue -= 1;
+  value.textContent = counterValue;
 };
 
 increment.addEventListener("click", incrementFunc);
