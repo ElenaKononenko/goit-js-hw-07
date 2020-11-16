@@ -14,9 +14,8 @@ const createBoxes = (amount) => {
     newDiv.style.backgroundColor = theColor;
     boxArr.push(newDiv);
   }
-  boxArr.forEach((el) => {
-    divBoxesRef.appendChild(el);
-  });
+
+  divBoxesRef.append(...boxArr);
 };
 
 renderRef.addEventListener("click", () => {

@@ -30,6 +30,4 @@ const galleryRef = images.map((el) => {
   itemListRef.appendChild(imageRef);
   return itemListRef;
 });
-galleryRef.forEach((el) => {
-  gallery.appendChild(el);
-});
+gallery.append(...galleryRef);

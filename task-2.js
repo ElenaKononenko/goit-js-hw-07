@@ -13,6 +13,4 @@ const ingredArr = ingredients.map((el) => {
   return item;
 });
 
-ingredArr.forEach((el) => {
-  ingredient.appendChild(el);
-});
+ingredient.append(...ingredArr);
